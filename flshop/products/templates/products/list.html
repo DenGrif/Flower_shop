@@ -1,0 +1,8 @@
+{% for product in products %}
+    <div class="product">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }} руб.</p>
+        <a href="{% url 'add_to_cart' product.id %}">Добавить в корзину</a>
+    </div>
+{% endfor %}
